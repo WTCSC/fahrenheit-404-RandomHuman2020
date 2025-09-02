@@ -19,8 +19,8 @@ intemp = input(f"Type the temperature you would like to convert to {outunitstr}:
 
 try:
     intemp = float(intemp)
-    if units == "2" & intemp < -274 or intemp > 9999:
-        print("Invalid input. Quitting...")
+    if units == "2" and intemp < -274 or intemp > 9999:
+        print("Invalid temperature. Quitting...")
         exit(1)
     if units == "1":
         outtemp = (intemp - 32) * 0.5555
