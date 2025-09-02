@@ -6,16 +6,16 @@ units = input("Press 1 for Fahrenheit -> Celcius \n\nPress 2 for Celcius -> Fahr
 
 if units == "1":
 
+    inunitstr = "Fahrenheit"
+    outunitstr = "Celsius"
+elif units == "2":
     inunitstr = "Celcius"
     outunitstr = "Fahrenheit"
-elif units == "2":
-    inunitstr = "Fahrenheit"
-    outunitstr = "Celcius"
 else:
     print("Invalid selection. Quitting...")
     exit(1)
 
-intemp = input(f"Type the temperature you would like to convert to {inunitstr}: ")
+intemp = input(f"Type the temperature you would like to convert to {outunitstr}: ")
 
 try:
     intemp = float(intemp)
@@ -23,7 +23,7 @@ try:
         outtemp = (intemp - 32) * 0.5555
     elif units == "2":
         outtemp = (intemp * 1.8) + 32
-    print(f"{intemp} degrees {inunitstr} is equal to {outtemp} degrees {outunitstr}.")
+    print(f"\n{intemp} degrees {inunitstr} is equal to {outtemp} degrees {outunitstr}.")
 except ValueError:
     print("Invalid temperature. Quitting...")
     exit(1)
