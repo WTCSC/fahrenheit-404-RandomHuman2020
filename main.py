@@ -43,7 +43,7 @@ while willrestart:
                 outtemp = (intemp * 1.8) + 32
             print(f"\n{intemp} degrees {inunitstr} is equal to {outtemp} degrees {outunitstr}.")
             restarting = input("Do you want to convert more? ")
-            if restarting == "yes" or restarting == "y" or restarting == "Y" or restarting == "Yes":
+            if restarting.lower() == "yes" or restarting.lower() == "y":
                 willrestart = True
             else:
                 willrestart = False
